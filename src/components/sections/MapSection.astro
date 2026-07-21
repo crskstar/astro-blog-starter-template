@@ -20,13 +20,13 @@ const { t } = Astro.props;
 				<img src="/mapaBrasil-Usar.jpg" alt={t.map.imageAlt} class="w-full rounded-[1.5rem] transition-transform duration-700 ease-out group-hover:scale-[1.04]" draggable="false" />
 				<div class="absolute inset-0">
 					{COVERAGE_POINTS.map((point) => (
-						<button type="button" class="coverage-marker absolute" style={`left:${point.left}%; top:${point.top}%;`} data-state={point.name}>
+						<button type="button" class="coverage-marker absolute" style={`left:${point.left}%; top:${point.top}%; --marker-color:${point.color};`} data-state={point.name}>
 							<span class="marker-hatch" aria-hidden="true"></span>
 							<span class="marker-dot" aria-hidden="true"></span>
 							<span class="marker-tooltip">
 								<span class="block text-sm font-semibold text-white">{point.name}</span>
 								<span class="mt-1 inline-flex items-center gap-1.5 text-xs font-medium text-blue-300">
-									<span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+									<span class="h-1.5 w-1.5 rounded-full" style={`background:${point.color};`}></span>
 									{t.map.statusActive}
 								</span>
 							</span>
@@ -40,7 +40,7 @@ const { t } = Astro.props;
 				<ul class="mt-5 space-y-3">
 					{COVERAGE_POINTS.map((point) => (
 						<li class="flex items-center gap-3 rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-3">
-							<span class="legend-swatch h-6 w-6 shrink-0 rounded-full"></span>
+							<span class="legend-swatch h-4 w-4 shrink-0 rounded-full" style={`--marker-color:${point.color};`}></span>
 							<span class="text-sm font-medium text-neutral-200">{point.name}</span>
 						</li>
 					))}
@@ -53,18 +53,18 @@ const { t } = Astro.props;
 
 <style>
 	.coverage-marker {
-		width: 2.25rem;
-		height: 2.25rem;
+		width: 1.1rem;
+		height: 1.1rem;
 		transform: translate(-50%, -50%);
 		cursor: pointer;
 	}
 
 	.marker-hatch {
 		position: absolute;
-		inset: -0.65rem;
+		inset: -0.4rem;
 		border-radius: 9999px;
-		background-image: repeating-linear-gradient(45deg, rgba(96, 165, 250, 0.55) 0 2px, transparent 2px 6px);
-		border: 1px solid rgba(96, 165, 250, 0.45);
+		background-image: repeating-linear-gradient(45deg, color-mix(in srgb, var(--marker-color) 65%, transparent) 0 2px, transparent 2px 6px);
+		border: 1px solid color-mix(in srgb, var(--marker-color) 55%, transparent);
 		transition: transform 300ms ease;
 	}
 
@@ -72,14 +72,14 @@ const { t } = Astro.props;
 		position: absolute;
 		inset: 0;
 		border-radius: 9999px;
-		background: #60a5fa;
-		box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+		background: var(--marker-color);
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--marker-color) 30%, transparent);
 		transition: transform 300ms ease;
 	}
 
 	.legend-swatch {
-		background-image: repeating-linear-gradient(45deg, rgba(96, 165, 250, 0.55) 0 2px, rgba(96, 165, 250, 0.12) 2px 6px);
-		border: 1px solid rgba(96, 165, 250, 0.45);
+		background-image: repeating-linear-gradient(45deg, var(--marker-color) 0 2px, color-mix(in srgb, var(--marker-color) 15%, transparent) 2px 6px);
+		border: 1px solid color-mix(in srgb, var(--marker-color) 60%, transparent);
 	}
 
 	.coverage-marker:hover .marker-hatch,
