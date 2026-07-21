@@ -1,0 +1,38 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="40" fill="#05070D"/>
+  <rect x="60" y="90" width="1080" height="720" rx="32" fill="url(#bg)"/>
+  <path d="M95 646C318 556 515 512 813 459C968 431 1042 426 1105 420V782H95V646Z" fill="#17325C"/>
+  <path d="M95 691C308 625 520 592 773 546C920 520 1028 515 1105 514V782H95V691Z" fill="#1D4ED8"/>
+  <path d="M95 716C330 675 548 650 791 630C930 619 1036 617 1105 615V782H95V716Z" fill="#3B82F6"/>
+  <rect x="120" y="170" width="260" height="140" rx="24" fill="#0B1220" fill-opacity="0.75" stroke="#60A5FA" stroke-opacity="0.45"/>
+  <path d="M175 260H260" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M175 232H260" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="292" cy="246" r="20" fill="#3B82F6"/>
+  <circle cx="292" cy="246" r="8" fill="#F8FAFC"/>
+  <path d="M734 238L818 164L879 207L797 282L734 238Z" fill="#BFDBFE" fill-opacity="0.9"/>
+  <rect x="725" y="241" width="90" height="22" rx="11" fill="#60A5FA"/>
+  <rect x="709" y="272" width="130" height="18" rx="9" fill="#3B82F6"/>
+  <path d="M650 350C650 312 680 282 718 282H804C842 282 872 312 872 350V384H650V350Z" fill="#0F172A"/>
+  <path d="M680 370H842" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M715 332H807" stroke="#93C5FD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M728 261L782 182" stroke="#F8FAFC" stroke-width="6" stroke-linecap="round"/>
+  <path d="M759 277L826 214" stroke="#F8FAFC" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="684" cy="568" r="34" fill="#F8FAFC" fill-opacity="0.88"/>
+  <path d="M684 537L684 599" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M653 568L715 568" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M763 584L214 584" stroke="#22D3EE" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 12"/>
+  <path d="M745 528C785 548 808 564 830 576" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M450 160C493 158 520 178 527 208" stroke="#22D3EE" stroke-width="8" stroke-linecap="round"/>
+  <path d="M507 220C560 213 601 246 637 300" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <rect x="142" y="528" width="184" height="118" rx="24" fill="#0B1220" fill-opacity="0.8" stroke="#60A5FA" stroke-opacity="0.3"/>
+  <path d="M177 575H288" stroke="#93C5FD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M177 608H270" stroke="#60A5FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M177 544H309" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="96" x2="1064" y2="792" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142A4D"/>
+      <stop offset="0.5" stop-color="#0D1F3D"/>
+      <stop offset="1" stop-color="#1A3968"/>
+    </linearGradient>
+  </defs>
+</svg>

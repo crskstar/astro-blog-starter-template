@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "benefits": "Benefícios",
+    "technology": "Tecnologia",
+    "about": "Sobre",
+    "contact": "Contato",
+    "cta": "Solicitar orçamento"
+  },
+  "hero": {
+    "eyebrow": "Tecnologia agrícola de alto desempenho",
+    "title": "Pulverização agrícola por drone com precisão, economia e alta performance",
+    "subtitle": "Soluções inteligentes para aplicação localizada, redução de desperdícios e aumento da eficiência no campo.",
+    "primaryCta": "Solicitar orçamento",
+    "secondaryCta": "Conhecer serviços",
+    "imageAlt": "Drone agrícola aplicando insumos em lavoura com precisão"
+  },
+  "benefits": {
+    "eyebrow": "Resultados reais no campo",
+    "title": "Benefícios que fazem a diferença",
+    "description": "Combinação de tecnologia, operação confiável e foco em produtividade, custo e sustentabilidade.",
+    "items": [
+      {
+        "title": "Redução de desperdício",
+        "description": "Aplicação mais precisa, com menor perda de insumos e melhor aproveitamento da área tratada."
+      },
+      {
+        "title": "Aplicação precisa",
+        "description": "Controle fino do volume, dosagem e cobertura para cada trecho da lavoura."
+      },
+      {
+        "title": "Acesso a áreas difíceis",
+        "description": "Operação eficiente em terrenos irregulares, áreas de risco e regiões de difícil acesso."
+      },
+      {
+        "title": "Menor compactação do solo",
+        "description": "Redução do impacto das máquinas e preservação da estrutura do solo."
+      },
+      {
+        "title": "Mais segurança operacional",
+        "description": "Menor exposição do operador e processos com maior controle em campo."
+      },
+      {
+        "title": "Agilidade na aplicação",
+        "description": "Resposta rápida, execução uniforme e execução em menor tempo por hectare."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Serviços completos",
+    "title": "Soluções sob medida para cada operação",
+    "description": "Atendemos produtores e empresas com planejamento, execução e acompanhamento profissional.",
+    "items": [
+      {
+        "title": "Pulverização agrícola por drone",
+        "description": "Aplicação aérea com precisão para culturas, áreas e demandas específicas."
+      },
+      {
+        "title": "Aplicação localizada",
+        "description": "Estratégias de aplicação focadas em pontos críticos e áreas prioritárias."
+      },
+      {
+        "title": "Mapeamento e planejamento",
+        "description": "Levantamento operacional com base em dados e rotas planejadas para cada área."
+      },
+      {
+        "title": "Atendimento escalável",
+        "description": "Soluções para pequenas, médias e grandes áreas, com flexibilidade de operação."
+      },
+      {
+        "title": "Suporte técnico",
+        "description": "Acompanhamento especializado antes, durante e depois da aplicação."
+      },
+      {
+        "title": "Relatórios e rastreio",
+        "description": "Registro da operação com controle de execução, cobertura e resultados."
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Por que usar drones",
+    "title": "Por que usar drones na pulverização?",
+    "description": "A tecnologia permite trabalhar com mais precisão, rapidez e previsibilidade, acompanhando o ritmo da produção moderna.",
+    "points": [
+      "Aplicação com maior controle e menos desperdício.",
+      "Operação mais rápida e com melhor aproveitamento do tempo.",
+      "Maior acesso a áreas de difícil manobra e terreno irregular.",
+      "Melhor planejamento com dados e rastreio da execução."
+    ]
+  },
+  "technology": {
+    "eyebrow": "Tecnologia e operação",
+    "title": "Construímos cada aplicação com precisão e consistência",
+    "description": "Cada etapa é pensada para oferecer uniformidade, segurança e performance operacional.",
+    "equipmentLink": "Ver especificações oficiais",
+    "items": [
+      {
+        "title": "DJI Agras T70P — nosso equipamento",
+        "description": "Tanque de pulverização de 70 L (vazão de 40 L/min), caixa de espalhamento de 100 L (vazão de 400 kg/min) e carga útil de até 70 kg."
+      },
+      {
+        "title": "Planejamento de rotas",
+        "description": "Definição de trajetórias e estratégias para cobertura otimizada da área."
+      },
+      {
+        "title": "Aplicação uniforme",
+        "description": "Fluxo estável para uma distribuição consistente ao longo da lavoura."
+      },
+      {
+        "title": "Monitoramento da área aplicada",
+        "description": "Acompanhamento do processo com controle de execução e registros."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Sobre a AgroDrone Solutions",
+    "title": "Tecnologia moderna para o campo que cresce",
+    "description": "A AgroDrone Solutions nasceu para levar ao campo soluções modernas de pulverização aérea com drones, combinando tecnologia, eficiência operacional e compromisso com o produtor rural.",
+    "highlight": "Seis anos de experiência no mercado e mais de 70.000 hectares aplicados com precisão — um histórico que nos diferencia da concorrência.",
+    "yearsValue": "6+",
+    "yearsLabel": "Anos de mercado",
+    "areaValue": "70.000+",
+    "areaLabel": "Hectares aplicados",
+    "coverageTitle": "Onde atuamos",
+    "coverageNote": "Atualmente atendemos esses estados, com novas áreas sendo adicionadas regularmente.",
+    "coverageCta": "Ver mapa de cobertura"
+  },
+  "cta": {
+    "eyebrow": "Próximo passo",
+    "title": "Leve mais precisão para sua lavoura",
+    "description": "Entre em contato e solicite uma avaliação para sua área.",
+    "button": "Falar com especialista"
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar sobre sua operação",
+    "description": "Fale diretamente pelo WhatsApp ou e-mail para receber uma avaliação rápida.",
+    "whatsapp": "Falar pelo WhatsApp",
+    "detailsTitle": "Atendimento direto",
+    "emailLabel": "E-mail",
+    "addressLabel": "Endereço (sede nos EUA)",
+    "socialTitle": "Siga a AgroDrone Solutions",
+    "socialText": "Nosso Instagram é o canal principal para novidades, bastidores e aplicações em campo."
+  },
+  "instagram": {
+    "eyebrow": "Instagram",
+    "title": "Acompanhe nosso trabalho no Instagram",
+    "description": "O Instagram é o principal canal da AgroDrone Solutions para novidades frequentes, bastidores, vídeos de drone e demonstrações em campo.",
+    "button": "Ver Instagram",
+    "note": "Atualizações rápidas, resultados de operação e bastidores do trabalho no campo."
+  },
+  "map": {
+    "eyebrow": "Cobertura",
+    "title": "Onde a AgroDrone Solutions já atua",
+    "description": "Um olhar interativo sobre o Brasil — passe o mouse ou toque em um estado destacado para ver onde estamos operando.",
+    "imageAlt": "Mapa do Brasil com os estados de atuação da AgroDrone Solutions destacados",
+    "statusActive": "Operação ativa",
+    "listTitle": "Estados em operação",
+    "hint": "Passe o mouse ou toque em um estado destacado no mapa para ver os detalhes."
+  },
+  "footer": {
+    "description": "Soluções de pulverização agrícola por drone com foco em precisão, produtividade e sustentabilidade.",
+    "quickLinks": "Links rápidos",
+    "language": "Idioma",
+    "rights": "Todos os direitos reservados."
+  }
+}

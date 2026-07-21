@@ -1,0 +1,36 @@
+<svg viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+	<defs>
+		<linearGradient id="brGrad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#1e3a8a" />
+			<stop offset="100%" stop-color="#0a1730" />
+		</linearGradient>
+		<pattern id="brHatch" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+			<line x1="0" y1="0" x2="0" y2="10" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.18" />
+		</pattern>
+		<pattern id="dotGrid" width="22" height="22" patternUnits="userSpaceOnUse">
+			<circle cx="1.2" cy="1.2" r="1.2" fill="#334155" fill-opacity="0.35" />
+		</pattern>
+	</defs>
+
+	<rect width="560" height="620" fill="url(#dotGrid)" />
+
+	<!-- South America context (simplified, non-interactive) -->
+	<path d="M40,200 C10,270 0,370 20,450 C40,510 90,480 85,400 C90,310 70,240 40,200 Z" fill="#1e293b" opacity="0.4" />
+	<path d="M60,90 C120,40 260,30 330,70 C300,110 180,120 60,90 Z" fill="#1e293b" opacity="0.4" />
+	<path d="M40,480 C100,450 220,460 270,500 C300,540 260,590 180,610 C100,620 30,560 40,480 Z" fill="#1e293b" opacity="0.4" />
+
+	<!-- Brazil silhouette (low-poly, illustrative) -->
+	<path
+		d="M283,59 L177,50 L61,136 L18,251 L73,280 L122,309 L207,409 L207,452 L250,488 L214,553 L264,606 L323,524 L350,466 L388,452 L423,413 L445,309 L488,265 L490,224 L445,165 L375,158 L323,136 L293,100 Z"
+		fill="url(#brGrad)"
+		stroke="#3b82f6"
+		stroke-width="2.5"
+		stroke-opacity="0.7"
+		stroke-linejoin="round"
+	/>
+	<path
+		d="M283,59 L177,50 L61,136 L18,251 L73,280 L122,309 L207,409 L207,452 L250,488 L214,553 L264,606 L323,524 L350,466 L388,452 L423,413 L445,309 L488,265 L490,224 L445,165 L375,158 L323,136 L293,100 Z"
+		fill="url(#brHatch)"
+		opacity="0.5"
+	/>
+</svg>

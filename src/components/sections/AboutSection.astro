@@ -1,0 +1,47 @@
+---
+import DroneIcon from '../DroneIcon.astro';
+
+interface Props {
+	t: Record<string, any>;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="about" class="bg-neutral-950 px-6 py-24 text-white lg:px-8">
+	<div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.9fr]">
+		<div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-blue-500/20 to-neutral-900 p-8 shadow-2xl shadow-blue-950/20">
+			<p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300" data-i18n-key="about.eyebrow">{t.about.eyebrow}</p>
+			<h2 class="mt-3 text-3xl font-semibold sm:text-4xl" data-i18n-key="about.title">{t.about.title}</h2>
+			<p class="mt-6 text-lg leading-8 text-neutral-300" data-i18n-key="about.description">{t.about.description}</p>
+			<div class="mt-8 rounded-2xl border border-blue-400/20 bg-blue-400/10 p-5 text-blue-100" data-i18n-key="about.highlight">{t.about.highlight}</div>
+			<div class="mt-6 grid grid-cols-2 gap-4">
+				<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+					<p class="text-3xl font-semibold text-blue-300" data-i18n-key="about.yearsValue">{t.about.yearsValue}</p>
+					<p class="mt-1 text-sm text-neutral-300" data-i18n-key="about.yearsLabel">{t.about.yearsLabel}</p>
+				</div>
+				<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+					<p class="text-3xl font-semibold text-blue-300" data-i18n-key="about.areaValue">{t.about.areaValue}</p>
+					<p class="mt-1 text-sm text-neutral-300" data-i18n-key="about.areaLabel">{t.about.areaLabel}</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col justify-center gap-4 rounded-[2rem] border border-neutral-800 bg-neutral-900/80 p-8">
+			<div class="rounded-2xl border border-neutral-800 bg-neutral-950/60 p-6">
+				<div class="flex items-center gap-3">
+					<DroneIcon size={48} />
+					<h3 class="text-xl font-semibold text-white">AgroDrone Solutions</h3>
+				</div>
+				<p class="mt-3 text-base leading-7 text-neutral-400">Modern aerial spraying operations for agriculture that demand efficiency, precision and predictable results.</p>
+			</div>
+			<div class="rounded-2xl border border-neutral-800 bg-neutral-950/60 p-6">
+				<h3 class="text-xl font-semibold text-white" data-i18n-key="about.coverageTitle">{t.about.coverageTitle}</h3>
+				<p class="mt-3 text-base leading-7 text-neutral-400" data-i18n-key="about.coverageNote">{t.about.coverageNote}</p>
+				<a href="#coverage" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition hover:text-blue-200" data-i18n-key="about.coverageCta">
+					{t.about.coverageCta}
+					<span aria-hidden="true">&rarr;</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

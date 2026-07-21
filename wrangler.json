@@ -1,5 +1,6 @@
 {
 	"name": "astro-blog-starter-template",
+	"account_id": "0ecafed94ad212428559c6a40a40ad8c",
 	"compatibility_date": "2025-10-08",
 	"compatibility_flags": ["nodejs_compat"],
 	"main": "./dist/_worker.js/index.js",

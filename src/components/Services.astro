@@ -1,0 +1,106 @@
+---
+interface Service {
+	title: string;
+	description: string;
+	icon: string;
+}
+
+interface Props {
+	services: Service[];
+}
+
+const { services } = Astro.props;
+---
+
+<section class="services-section">
+	<div class="container">
+		<h2>Nossos Serviços</h2>
+		<p class="section-subtitle">Soluções completas em tecnologia agrícola com drone</p>
+		
+		<div class="services-grid">
+			{services.map((service) => (
+				<div class="service-card">
+					<div class="service-icon">{service.icon}</div>
+					<h3>{service.title}</h3>
+					<p>{service.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.services-section {
+		padding: 4rem 1rem;
+		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+		color: #1a3a3a;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: #666;
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		text-align: center;
+	}
+
+	.service-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	}
+
+	.service-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 {
+		color: #1a3a3a;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.service-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.services-section {
+			padding: 2rem 1rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

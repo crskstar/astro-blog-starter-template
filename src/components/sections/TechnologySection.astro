@@ -1,0 +1,34 @@
+---
+import { EQUIPMENT_URL } from '../../consts';
+
+interface Props {
+	t: Record<string, any>;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="technology" class="bg-white px-6 py-24 lg:px-8">
+	<div class="mx-auto max-w-7xl">
+		<div class="max-w-3xl">
+			<p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600" data-i18n-key="technology.eyebrow">{t.technology.eyebrow}</p>
+			<h2 class="mt-3 text-3xl font-semibold text-neutral-950 sm:text-4xl" data-i18n-key="technology.title">{t.technology.title}</h2>
+			<p class="mt-4 text-lg leading-8 text-neutral-600" data-i18n-key="technology.description">{t.technology.description}</p>
+		</div>
+		<div class="mt-12 grid gap-6 md:grid-cols-2">
+			{t.technology.items.map((item: any, index: number) => (
+				<article class="rounded-3xl border border-neutral-200 bg-neutral-50 p-7">
+					<div class="mb-4 h-12 w-12 rounded-2xl bg-blue-100 text-center text-2xl leading-[3rem] text-blue-700">{index + 1}</div>
+					<h3 class="text-xl font-semibold text-neutral-950" data-i18n-key={`technology.items.${index}.title`}>{item.title}</h3>
+					<p class="mt-3 text-base leading-7 text-neutral-600" data-i18n-key={`technology.items.${index}.description`}>{item.description}</p>
+					{index === 0 && (
+						<a href={EQUIPMENT_URL} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition hover:text-blue-700" data-i18n-key="technology.equipmentLink">
+							{t.technology.equipmentLink}
+							<span aria-hidden="true">→</span>
+						</a>
+					)}
+				</article>
+			))}
+		</div>
+	</div>
+</section>

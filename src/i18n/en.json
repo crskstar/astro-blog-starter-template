@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "benefits": "Benefits",
+    "technology": "Technology",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Request a quote"
+  },
+  "hero": {
+    "eyebrow": "High-performance agricultural technology",
+    "title": "Agricultural drone spraying with precision, efficiency and outstanding performance",
+    "subtitle": "Smart solutions for targeted application, reduced waste and greater efficiency in the field.",
+    "primaryCta": "Request a quote",
+    "secondaryCta": "Explore services",
+    "imageAlt": "Agricultural drone applying inputs in a field with precision"
+  },
+  "benefits": {
+    "eyebrow": "Real results in the field",
+    "title": "Benefits that make a difference",
+    "description": "A combination of technology, reliable operations and a focus on productivity, cost and sustainability.",
+    "items": [
+      {
+        "title": "Reduced waste",
+        "description": "More precise application, with less input loss and better use of the treated area."
+      },
+      {
+        "title": "Precise application",
+        "description": "Fine control of volume, dosage and coverage for each part of the crop."
+      },
+      {
+        "title": "Access to difficult areas",
+        "description": "Efficient operation in uneven terrain, high-risk areas and hard-to-reach regions."
+      },
+      {
+        "title": "Less soil compaction",
+        "description": "Reduced impact of machinery and preservation of soil structure."
+      },
+      {
+        "title": "Greater operational safety",
+        "description": "Lower exposure for the operator and more controlled processes in the field."
+      },
+      {
+        "title": "Faster application",
+        "description": "Quick response, uniform execution and shorter time per hectare."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Complete services",
+    "title": "Tailored solutions for every operation",
+    "description": "We support producers and companies with professional planning, execution and follow-up.",
+    "items": [
+      {
+        "title": "Agricultural drone spraying",
+        "description": "Aerial application with precision for crops, areas and specific demands."
+      },
+      {
+        "title": "Targeted application",
+        "description": "Application strategies focused on critical points and priority areas."
+      },
+      {
+        "title": "Mapping and planning",
+        "description": "Operational surveys based on data and predefined routes for each area."
+      },
+      {
+        "title": "Scalable support",
+        "description": "Solutions for small, medium and large areas with operational flexibility."
+      },
+      {
+        "title": "Technical support",
+        "description": "Specialized follow-up before, during and after application."
+      },
+      {
+        "title": "Tracking and reporting",
+        "description": "Operational tracking with coverage, execution and outcome records."
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why drones",
+    "title": "Why use drones for spraying?",
+    "description": "The technology allows more precision, speed and predictability, keeping pace with modern production.",
+    "points": [
+      "More controlled application with less waste.",
+      "Faster operations with better use of time.",
+      "Better access to hard-to-maneuver and irregular terrain.",
+      "Better planning with operational data and execution tracking."
+    ]
+  },
+  "technology": {
+    "eyebrow": "Technology and operations",
+    "title": "Every application is built with precision and consistency",
+    "description": "Each step is designed to deliver uniformity, safety and operational performance.",
+    "equipmentLink": "View official specifications",
+    "items": [
+      {
+        "title": "DJI Agras T70P — our equipment",
+        "description": "70 L spray tank (40 L/min flow rate), 100 L spreading tank (400 kg/min flow rate) and payload capacity of up to 70 kg."
+      },
+      {
+        "title": "Route planning",
+        "description": "Definition of trajectories and strategies for optimized area coverage."
+      },
+      {
+        "title": "Uniform application",
+        "description": "Stable flow for consistent distribution across the field."
+      },
+      {
+        "title": "Monitoring of applied areas",
+        "description": "Process follow-up with execution control and records."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About AgroDrone Solutions",
+    "title": "Modern technology for a growing field",
+    "description": "AgroDrone Solutions was created to bring modern aerial spraying solutions to the field by combining technology, operational efficiency and commitment to the rural producer.",
+    "highlight": "Six years of market experience and more than 70,000 hectares applied with precision — a track record that sets us apart from the competition.",
+    "yearsValue": "6+",
+    "yearsLabel": "Years in the market",
+    "areaValue": "70,000+",
+    "areaLabel": "Hectares applied",
+    "coverageTitle": "Where we operate",
+    "coverageNote": "Currently serving these states, with new areas added regularly.",
+    "coverageCta": "View coverage map"
+  },
+  "cta": {
+    "eyebrow": "Next step",
+    "title": "Bring more precision to your farm",
+    "description": "Get in touch and request an assessment for your area.",
+    "button": "Talk to an expert"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s talk about your operation",
+    "description": "Reach out directly via WhatsApp or e-mail for a quick assessment.",
+    "whatsapp": "Talk on WhatsApp",
+    "detailsTitle": "Direct support",
+    "emailLabel": "E-mail",
+    "addressLabel": "Address (US headquarters)",
+    "socialTitle": "Follow AgroDrone Solutions",
+    "socialText": "Our Instagram is the main channel for updates, behind-the-scenes content and field applications."
+  },
+  "instagram": {
+    "eyebrow": "Instagram",
+    "title": "Follow our work on Instagram",
+    "description": "Instagram is AgroDrone Solutions’ main channel for frequent updates, behind-the-scenes content, drone videos and field demonstrations.",
+    "button": "View Instagram",
+    "note": "Fast updates, operational results and behind-the-scenes work in the field."
+  },
+  "map": {
+    "eyebrow": "Coverage",
+    "title": "Where AgroDrone Solutions already operates",
+    "description": "An interactive look at Brazil — hover or tap a highlighted state to see where we're flying.",
+    "imageAlt": "Map of Brazil with the states where AgroDrone Solutions operates highlighted",
+    "statusActive": "Active operation",
+    "listTitle": "States in operation",
+    "hint": "Hover or tap a highlighted state on the map to see the details."
+  },
+  "footer": {
+    "description": "Agricultural drone spraying solutions focused on precision, productivity and sustainability.",
+    "quickLinks": "Quick links",
+    "language": "Language",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,43 @@
+---
+interface Props {
+	username?: string;
+}
+
+const { username = "agrodrone.sa" } = Astro.props;
+---
+
+<div class="instagram-embed-container">
+	<div class="instagram-embed-wrapper">
+		<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/{username}/" data-instgrm-version="14"></blockquote>
+		<script async src="//www.instagram.com/embed.js"></script>
+	</div>
+</div>
+
+<style>
+	.instagram-embed-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 2rem 0;
+	}
+
+	.instagram-embed-wrapper {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	:global(.instagram-media) {
+		background: white;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	@media (max-width: 768px) {
+		.instagram-embed-wrapper {
+			max-width: 100%;
+		}
+	}
+</style>

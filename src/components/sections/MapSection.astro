@@ -1,0 +1,138 @@
+---
+import { COVERAGE_POINTS } from '../../consts';
+
+interface Props {
+	t: Record<string, any>;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="coverage" class="bg-neutral-950 px-6 py-24 text-white lg:px-8">
+	<div class="mx-auto max-w-7xl">
+		<div class="max-w-2xl">
+			<p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300" data-i18n-key="map.eyebrow">{t.map.eyebrow}</p>
+			<h2 class="mt-3 text-3xl font-semibold sm:text-4xl" data-i18n-key="map.title">{t.map.title}</h2>
+			<p class="mt-4 text-lg leading-8 text-neutral-300" data-i18n-key="map.description">{t.map.description}</p>
+		</div>
+		<div class="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+			<div class="group relative mx-auto w-full max-w-xl select-none">
+				<img src="/mapaBrasil-Usar.jpg" alt={t.map.imageAlt} class="w-full rounded-[1.5rem] transition-transform duration-700 ease-out group-hover:scale-[1.04]" draggable="false" />
+				<div class="absolute inset-0">
+					{COVERAGE_POINTS.map((point) => (
+						<button type="button" class="coverage-marker absolute" style={`left:${point.left}%; top:${point.top}%;`} data-state={point.name}>
+							<span class="marker-hatch" aria-hidden="true"></span>
+							<span class="marker-dot" aria-hidden="true"></span>
+							<span class="marker-tooltip">
+								<span class="block text-sm font-semibold text-white">{point.name}</span>
+								<span class="mt-1 inline-flex items-center gap-1.5 text-xs font-medium text-blue-300">
+									<span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+									{t.map.statusActive}
+								</span>
+							</span>
+							<span class="sr-only">{point.name}</span>
+						</button>
+					))}
+				</div>
+			</div>
+			<div class="rounded-[2rem] border border-neutral-800 bg-neutral-900/80 p-8">
+				<h3 class="text-lg font-semibold text-white" data-i18n-key="map.listTitle">{t.map.listTitle}</h3>
+				<ul class="mt-5 space-y-3">
+					{COVERAGE_POINTS.map((point) => (
+						<li class="flex items-center gap-3 rounded-xl border border-neutral-800 bg-neutral-950/60 px-4 py-3">
+							<span class="legend-swatch h-6 w-6 shrink-0 rounded-full"></span>
+							<span class="text-sm font-medium text-neutral-200">{point.name}</span>
+						</li>
+					))}
+				</ul>
+				<p class="mt-5 text-sm leading-6 text-neutral-500" data-i18n-key="map.hint">{t.map.hint}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.coverage-marker {
+		width: 2.25rem;
+		height: 2.25rem;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+	}
+
+	.marker-hatch {
+		position: absolute;
+		inset: -0.65rem;
+		border-radius: 9999px;
+		background-image: repeating-linear-gradient(45deg, rgba(96, 165, 250, 0.55) 0 2px, transparent 2px 6px);
+		border: 1px solid rgba(96, 165, 250, 0.45);
+		transition: transform 300ms ease;
+	}
+
+	.marker-dot {
+		position: absolute;
+		inset: 0;
+		border-radius: 9999px;
+		background: #60a5fa;
+		box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+		transition: transform 300ms ease;
+	}
+
+	.legend-swatch {
+		background-image: repeating-linear-gradient(45deg, rgba(96, 165, 250, 0.55) 0 2px, rgba(96, 165, 250, 0.12) 2px 6px);
+		border: 1px solid rgba(96, 165, 250, 0.45);
+	}
+
+	.coverage-marker:hover .marker-hatch,
+	.coverage-marker:focus-visible .marker-hatch,
+	.coverage-marker.is-active .marker-hatch {
+		transform: scale(1.7);
+	}
+
+	.coverage-marker:hover .marker-dot,
+	.coverage-marker:focus-visible .marker-dot,
+	.coverage-marker.is-active .marker-dot {
+		transform: scale(1.35);
+	}
+
+	.marker-tooltip {
+		position: absolute;
+		left: 50%;
+		bottom: calc(100% + 0.75rem);
+		transform: translate(-50%, 4px);
+		min-width: 10rem;
+		border-radius: 0.9rem;
+		border: 1px solid rgba(96, 165, 250, 0.3);
+		background: rgba(10, 14, 26, 0.95);
+		padding: 0.65rem 0.85rem;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 200ms ease, transform 200ms ease;
+		white-space: nowrap;
+		z-index: 20;
+	}
+
+	.coverage-marker:hover .marker-tooltip,
+	.coverage-marker:focus-visible .marker-tooltip,
+	.coverage-marker.is-active .marker-tooltip {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+</style>
+
+<script>
+	const markers = Array.from(document.querySelectorAll('.coverage-marker'));
+	markers.forEach((marker) => {
+		marker.addEventListener('click', () => {
+			const alreadyActive = marker.classList.contains('is-active');
+			markers.forEach((item) => item.classList.remove('is-active'));
+			if (!alreadyActive) {
+				marker.classList.add('is-active');
+			}
+		});
+	});
+	document.addEventListener('click', (event) => {
+		if (!(event.target instanceof Element) || !event.target.closest('.coverage-marker')) {
+			markers.forEach((item) => item.classList.remove('is-active'));
+		}
+	});
+</script>

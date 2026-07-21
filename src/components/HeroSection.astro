@@ -1,0 +1,116 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	ctaText?: string;
+	ctaLink?: string;
+}
+
+const { title, subtitle, ctaText = "Saiba Mais", ctaLink = "#servicos" } = Astro.props;
+---
+
+<section class="hero">
+	<div class="hero-content">
+		<h1>{title}</h1>
+		<p>{subtitle}</p>
+		<a href={ctaLink} class="cta-button">{ctaText}</a>
+	</div>
+	<div class="hero-background"></div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		min-height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+		opacity: 0.1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		color: white;
+		padding: 2rem;
+		max-width: 800px;
+		animation: fadeInUp 1s ease-out;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	p {
+		font-size: 1.4rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		line-height: 1.6;
+		text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 1rem 2.5rem;
+		background: #fff;
+		color: #667eea;
+		text-decoration: none;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+		background: #f0f0f0;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			min-height: 400px;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+		}
+
+		p {
+			font-size: 1.1rem;
+		}
+
+		.cta-button {
+			padding: 0.8rem 2rem;
+			font-size: 1rem;
+		}
+	}
+</style>

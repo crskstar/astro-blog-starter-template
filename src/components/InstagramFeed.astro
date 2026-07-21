@@ -1,0 +1,156 @@
+---
+import InstagramEmbed from './InstagramEmbed.astro';
+import { INSTAGRAM_PROFILE_URL, INSTAGRAM_HANDLE } from '../consts';
+---
+
+<section class="instagram-section" id="instagram">
+	<div class="container">
+		<div class="section-header">
+			<h2>Siga nosso Trabalho</h2>
+			<p>Acompanhe nossos projetos, inovações e soluções em tempo real</p>
+		</div>
+
+		<div class="instagram-content">
+			<div class="instagram-info">
+				<h3>Conheça a AgroDrone</h3>
+				<p>Tecnologia agrícola de ponta com drones de alta precisão. Sobrevoamos suas lavouras com inteligência.</p>
+				
+				<ul class="features">
+					<li>✈️ Drones profissionais de ponta</li>
+					<li>📊 Análise de dados em tempo real</li>
+					<li>🎯 Pulverização de precisão</li>
+					<li>🗺️ Mapeamento aéreo detalhado</li>
+					<li>📱 Relatórios digitais completos</li>
+				</ul>
+
+				<a href={INSTAGRAM_PROFILE_URL} target="_blank" rel="noopener noreferrer" class="instagram-link">
+					Visite {INSTAGRAM_HANDLE} no Instagram
+				</a>
+			</div>
+
+			<div class="instagram-embed-section">
+				<InstagramEmbed username="agrodrone.sa" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.instagram-section {
+		padding: 4rem 1rem;
+		background: #fff;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		color: #1a3a3a;
+		margin-bottom: 0.5rem;
+	}
+
+	.section-header p {
+		font-size: 1.1rem;
+		color: #666;
+	}
+
+	.instagram-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.instagram-info h3 {
+		font-size: 2rem;
+		color: #1a3a3a;
+		margin-bottom: 1rem;
+	}
+
+	.instagram-info p {
+		font-size: 1.1rem;
+		color: #666;
+		line-height: 1.8;
+		margin-bottom: 2rem;
+	}
+
+	.features {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	.features li {
+		padding: 0.8rem 0;
+		color: #333;
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.instagram-link {
+		display: inline-block;
+		margin-top: 2rem;
+		padding: 0.9rem 2rem;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		text-decoration: none;
+		border-radius: 50px;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+	}
+
+	.instagram-link:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+	}
+
+	.instagram-embed-section {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 1024px) {
+		.instagram-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.instagram-embed-section {
+			order: -1;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.instagram-section {
+			padding: 2rem 1rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+
+		.instagram-info h3 {
+			font-size: 1.5rem;
+		}
+
+		.instagram-info p {
+			font-size: 1rem;
+		}
+
+		.features li {
+			font-size: 0.95rem;
+		}
+	}
+</style>
