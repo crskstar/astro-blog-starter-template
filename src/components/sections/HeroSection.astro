@@ -8,32 +8,36 @@ interface Props {
 const { t } = Astro.props;
 ---
 
-<section id="home" class="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.25),_transparent_35%),linear-gradient(135deg,_#020617_0%,_#1e3a8a_45%,_#000000_100%)]">
-	<div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
+<section id="home" class="relative flex min-h-[640px] items-center overflow-hidden bg-neutral-950 py-28 lg:min-h-[760px] lg:py-36">
+	<video
+		class="absolute inset-0 h-full w-full object-cover"
+		poster="/video_apresentacao-poster.jpg"
+		autoplay
+		muted
+		loop
+		playsinline
+		aria-label={t.hero.imageAlt}
+	>
+		<source src="/video_apresentacao.mp4" type="video/mp4" />
+	</video>
+	<div class="relative mx-auto w-full max-w-7xl px-6 lg:px-8">
 		<div class="max-w-2xl">
-			<p class="mb-4 inline-flex rounded-full border border-blue-400/40 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-blue-200" data-i18n-key="hero.eyebrow">{t.hero.eyebrow}</p>
-			<h1 class="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl" data-i18n-key="hero.title">{t.hero.title}</h1>
-			<p class="mt-6 text-lg leading-8 text-neutral-200 sm:text-xl" data-i18n-key="hero.subtitle">{t.hero.subtitle}</p>
+			<p class="mb-4 inline-flex rounded-full border border-blue-400/40 bg-neutral-950/55 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-blue-200 backdrop-blur" data-i18n-key="hero.eyebrow">{t.hero.eyebrow}</p>
+			<h1 class="text-4xl font-semibold leading-tight text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85),0_1px_18px_rgba(0,0,0,0.6)] sm:text-5xl lg:text-6xl" data-i18n-key="hero.title">{t.hero.title}</h1>
+			<p class="mt-6 text-lg leading-8 text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.9),0_1px_12px_rgba(0,0,0,0.6)] sm:text-xl" data-i18n-key="hero.subtitle">{t.hero.subtitle}</p>
 			<div class="mt-8 flex flex-col gap-3 sm:flex-row">
-				<a href="#contact" class="rounded-full bg-blue-400 px-6 py-3 text-center font-semibold text-neutral-950 transition hover:bg-blue-300" data-i18n-key="hero.primaryCta">{t.hero.primaryCta}</a>
-				<a href="#services" class="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/20" data-i18n-key="hero.secondaryCta">{t.hero.secondaryCta}</a>
+				<a href="#contact" class="rounded-full bg-blue-400 px-6 py-3 text-center font-semibold text-neutral-950 shadow-lg shadow-black/40 transition hover:bg-blue-300" data-i18n-key="hero.primaryCta">{t.hero.primaryCta}</a>
+				<a href="#services" class="rounded-full border border-white/40 bg-neutral-950/45 px-6 py-3 text-center font-semibold text-white backdrop-blur transition hover:bg-neutral-950/65" data-i18n-key="hero.secondaryCta">{t.hero.secondaryCta}</a>
 			</div>
 		</div>
-		<div class="relative">
-			<div class="rounded-[2rem] border border-white/10 bg-neutral-950/45 p-3 shadow-2xl shadow-blue-950/30 backdrop-blur">
-				<video
-					class="h-full w-full rounded-[1.4rem] object-cover"
-					poster="/video_apresentacao-poster.jpg"
-					autoplay
-					muted
-					loop
-					playsinline
-					aria-label={t.hero.imageAlt}
-				>
-					<source src="/video_apresentacao.mp4" type="video/mp4" />
-				</video>
-			</div>
-			<DroneIcon size={88} float class="absolute -bottom-6 -right-6 hidden sm:inline-flex" />
-		</div>
+	</div>
+
+	<p class="absolute bottom-8 left-6 inline-flex items-center gap-1.5 rounded-full bg-neutral-950/55 px-3 py-1.5 text-xs font-medium text-neutral-200 backdrop-blur lg:left-8" data-i18n-key="hero.realFootage">
+		<span class="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true"></span>
+		{t.hero.realFootage}
+	</p>
+
+	<div class="absolute bottom-8 right-8 hidden sm:block">
+		<DroneIcon size={88} float />
 	</div>
 </section>
